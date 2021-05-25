@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>helloweb</title>
+</head>
+<!--body 属性,bgcolor是背景颜色
+    onclick 点击事件
+-->
+<!--  onclick="alert('megumi kato')"-->
+<body>
+hello \n megumi <br/>
+换行只能用 < br/ >,\n只能在字符串内使用
+hello kato<!--页面换行只能用<br/>,\n只能用在字符串中-->
+<hr/><!--hr是水平线-->
+< hr/>的效果是做出一条水平分割线↑
+<hr/>
+标签不能交叉嵌套<br/>
+标签需要有头有尾(成对或自结束)<br/>
+注释不能嵌套注释<br/>
+<hr/>
+<font color="green" face="宋体" size="7">我是字体标签</font>
+font有横线,表示h5不推荐使用该标签
+<br/>
+font字符标签,color字体颜色, face字体,size大小(范围1-7)
+<hr/>
+&lt;br&gt;
+& lt;会输出小括号&lt;
+具体可以查特殊字符表
+<br/>
+空格,大于小于号(尖括号)等
+<hr/>
+&lt;h1&gt;,h1-h6为可选属性,h7,h8等无法识别,只以默认格式输出包含的字符
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+<h4>h4</h4>
+<h5>h5</h5>
+<h6>h6</h6>
+<h7>h7</h7>
+<h8>h8</h8>
+<hr/>
+超链接标签&lt;a&gt;<br/>
+可以点击跳转的就是超链接,href属性中放跳转链接<br/>
+target属性选择本窗口跳转亦或是新窗口跳转
+<br/>
+<a href="http://localhost:80">localhost</a>
+<a href="http://localhost:80" target="_self">localhost self</a>
+<a href="http://localhost:80" target="_blank">localhost blank</a>
+<hr/>
+无序列表标签&lt;ul&gt;,无序列表列表项前默认为小圆点
+有列表标签&lt;ol&gt;,有序列表列表项前默认为序号
+列表项标签为&lt;li&gt;,,,即list item
+<br/>
+<ul>
+  <li>惠</li>
+  <li>err</li>
+  <li>学姐</li>
+  <li>美智留</li>
+  <li>出海</li>
+</ul>
+<ol>
+  <li>惠</li>
+  <li>err</li>
+  <li>学姐</li>
+  <li>美智留</li>
+  <li>出海</li>
+</ol>
+<hr/>
+web中也分绝对路径与相对路径,相对路径写法与一般相同
+<br/>
+绝对路径写法 不能用 盘符:目录/文件名 这种写法,要用 http://ip:port/工程名/路径名
+<br/>
+border设置边框宽度(厚度)
+<br/>
+width,height 设置图片长宽
+<br/>
+alt 当图片没法显示时,代替显示的文本信息
+<br/>
+<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202002%2F28%2F20200228031038_neopk.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624456895&t=234b8e72189d74dd0d1e9952494b0709"
+     height="100"
+     width="100"
+     border="10"
+     alt="图片找不到"
+/>
+<hr/>
+table 表格标签
+<br/>
+tr 行标签
+<br/>
+td 列(单元格)标签
+<br/>
+&lt;th&gt;标签相当于加粗居中的列(单元格标签)即&lt;th&gt;text&lt;th/&gt;= &lt;td align="center"&gt;&lt;b&gt;text&lt;b/&gt;&lt;td/&gt;
+<br/>
+border加边框
+<br/>
+width,height 设置单元格宽高
+<br/>
+align 设置对齐方式  ="center" 能让文本居中 ="right"靠右 ="left"靠右
+<br/>
+&lt;b&gt;标签让文本加粗
+<br/>
+cellspacing设置单元格间距
+<br/>
+colspan属性表示所跨列数
+<br/>
+rowspan属性表示所跨行数
+<br/>
+
+
+<table border="1" width="300" height="300" cellspacing="0">
+  <tr>
+    <td align="center"><b>1.1</b></td>
+    <th>1.2</th>
+    <td>1.3</td>
+  </tr>
+  <tr>
+    <td>2.1</td>
+    <td>2.2</td>
+    <td colspan="2" rowspan="2">2.3</td>
+    <td>2.4</td>
+  </tr>
+  <tr>
+    <td>3.1</td>
+    <td>3.2</td>
+    <td>3.3</td>
+    <td>3.4</td>
+  </tr>
+</table>
+<hr/>
+在网页中划出一个小窗口显示另一个网页(可互动)
+<br/>
+将a标签中的target改为iframe的别名,就能实现小页面跳转
+<br/>
+<iframe src="html/world.html" width="300" height="300" name="frame"></iframe>
+<a href="html/world.html" target="frame">to world</a>
+<a href="html/test.html" target="frame">to test</a>
+<hr/>
+表单类型
+<br/>
+password属性不可见内容
+<br/>
+用name把多个单选框radio编组,这样只能选择该组中的一个选项
+<br/>
+<form>
+  用户姓名:<input type="text" value="默认值"/>
+  <br/>
+  输入密码:<input type="password">
+  <br/>
+  确认密码:<input type="password">
+  <br/>
+  性别:<input type="radio" name="sex"/>男<input type="radio" name="sex"/>女
+  <br/>
+  兴趣爱好:
+  <input type="checkbox"/>java
+  <input type="checkbox"/>c++
+  <input type="checkbox"/>python
+  <input type="checkbox"/>c#
+  <br/>
+  国籍:<select>
+  <option>中国</option>
+  <option>东国</option>
+  <option>南国</option>
+  <option>西国</option>
+  <option>北国</option>
+</select>
+  <br/>
+  <br/>
+</form>
+<hr/>
+</body>
+</html>
